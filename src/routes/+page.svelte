@@ -5,7 +5,7 @@ pardon?
 	let count = 0;
 </script>
 
-<a href="/about">About my site</a>
+<a href="rajulang/about">About my site</a>
 
 <button on:click={() => count -= 1}>-</button>
 <span>{ count }</span>
