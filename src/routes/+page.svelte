@@ -1,7 +1,7 @@
 <h1>Created by Maulana Irfan | Fahri ferdinnansya | Rio Radiansyah</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
-Test
+huh?
 <script>
 	let count = 0;
 </script>
