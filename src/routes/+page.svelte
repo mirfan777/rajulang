@@ -2,10 +2,11 @@
 
 pardon?
 <script>
+    import { base } from '$app/paths';
 	let count = 0;
 </script>
 
-<a href="rajulang/about">About my site</a>
+<a href="{base}/about">About my site</a>
 
 <button on:click={() => count -= 1}>-</button>
 <span>{ count }</span>
