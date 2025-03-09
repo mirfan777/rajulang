@@ -13,6 +13,7 @@
     // Only import Leaflet on the client side
     if (typeof window !== 'undefined') {
       // Dynamically import Leaflet
+      // @ts-ignore
       L = await import('leaflet');
       
       // Import Leaflet CSS
