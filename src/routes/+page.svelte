@@ -1,10 +1,9 @@
 <h1>Created by Maulana Irfan | Fahri ferdinnansya | Rio Radiansyah</h1>
 
-pardon?
 <script>
 // @ts-nocheck
 
-    import { base } from '$app/paths';
+  import { base } from '$app/paths';
 	let count = 0;
 
     let modal;
