@@ -23,6 +23,7 @@
 	  <ul class="menu menu-horizontal px-1">
 		<li><a href="{base}/temutukar">TemuTukar</a></li>
 		<li><a>Item 2</a></li>
+		<li><a href="">Marketplace</a></li>
 	  </ul>
 	</div>
 	<div class="navbar-end">
