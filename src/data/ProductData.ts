@@ -1,175 +1,1118 @@
-const UserMarkers = [
-    {
-        name: "Anita Wijaya",
-        title: "Sepatu Running Wanita",
-        lat: -6.5971,
-        lng: 106.7931,
-        distance: 2,
-        imageUrl: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=300",
-        category: "sepatu",
-        description: "Sepatu running wanita ukuran 38, masih bagus",
-        requirement: true,
-        requirement_description: "Butuh pakaian anak perempuan usia 6 tahun"
-    },
-    {
-        name: "Budi Santoso",
-        title: "Kemeja Pria Katun",
-        lat: -6.5795,
-        lng: 106.8134,
-        distance: 1.2,
-        imageUrl: "https://images.unsplash.com/photo-1588099768531-a72d4a198538?q=80&w=300",
-        category: "pakaian dewasa",
-        description: "Kemeja pria bahan katun ukuran L, warna biru",
-        requirement: false,
-        requirement_description: "Tanpa Syarat"
-    },
-    {
-        name: "Dian Purnama",
-        title: "Kacamata Fashion",
-        lat: -6.5850,
-        lng: 106.7990,
-        distance: 0.8,
-        imageUrl: "https://images.unsplash.com/photo-1604176424472-9d740a17a46a?q=80&w=300",
-        category: "kacamata",
-        description: "Kacamata fashion frame bulat, kondisi mulus",
-        requirement: true,
-        requirement_description: "Butuh tas ransel untuk anak SMP"
-    },
-    {
-        name: "Eko Prasetyo",
-        title: "Tas Selempang Hitam",
-        lat: -6.6010,
-        lng: 106.8050,
-        distance: 2.5,
-        imageUrl: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=300",
-        category: "tas",
-        description: "Tas selempang ukuran sedang warna hitam",
-        requirement: true,
-        requirement_description: "Butuh sepatu pria ukuran 42"
-    },
-    {
-        name: "Fitriani Rahma",
-        title: "Baju Anak Laki-laki",
-        lat: -6.5760,
-        lng: 106.7875,
-        distance: 1.9,
-        imageUrl: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=300",
-        category: "pakaian anak",
-        description: "Baju anak laki-laki usia 4-5 tahun, 3 set",
-        requirement: true,
-        requirement_description: "Butuh pakaian dewasa wanita ukuran M"
-    },
-    {
-        name: "Gita Ardani",
-        title: "Sandal Wanita Terbaru",
-        lat: -6.5920,
-        lng: 106.8180,
-        distance: 1.4,
-        imageUrl: "https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=300",
-        category: "sendal",
-        description: "Sandal wanita ukuran 37, model terbaru",
-        requirement: false,
-        requirement_description: "Tanpa Syarat"
-    },
-    {
-        name: "Hadi Gunawan",
-        title: "Jam Tangan Kasual",
-        lat: -6.5830,
-        lng: 106.8230,
-        distance: 1.7,
-        imageUrl: "https://images.unsplash.com/photo-1558191053-8edcb01e1da3?q=80&w=300",
-        category: "akesesoris",
-        description: "Jam tangan pria model kasual",
-        requirement: true,
-        requirement_description: "Butuh kacamata baca"
-    },
-    {
-        name: "Indah Permata",
-        title: "Dress Casual Wanita",
-        lat: -6.6050,
-        lng: 106.7980,
-        distance: 2.3,
-        imageUrl: "https://images.unsplash.com/photo-1603400521630-9f2de124b33b?q=80&w=300",
-        category: "pakaian dewasa",
-        description: "Dress casual wanita ukuran S, warna pastel",
-        requirement: true,
-        requirement_description: "Butuh pakaian olahraga ukuran M"
-    },
-    {
-        name: "Joko Widodo",
-        title: "Sepatu Formal Pria",
-        lat: -6.5710,
-        lng: 106.8100,
-        distance: 2.1,
-        imageUrl: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=300",
-        category: "sepatu",
-        description: "Sepatu formal pria ukuran 41, warna coklat",
-        requirement: false,
-        requirement_description: "Tanpa Syarat"
-    },
-    {
-        name: "Kartika Dewi",
-        title: "Tas Tote Motif Bunga",
-        lat: -6.5975,
-        lng: 106.8270,
-        distance: 1.8,
-        imageUrl: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
-        category: "tas",
-        description: "Tas tote wanita bahan kanvas, motif bunga",
-        requirement: true,
-        requirement_description: "Butuh sandal anak ukuran 30"
-    }
-]
+import Users from '../data/UserData';
 
-const ItemsProduct = [
-    {
-        title: "Sepatu Henchman",
-        desc : "Tukar Ria Sempur adalah sebuah acara tukar menukar barang yang diadakan oleh warga sekitar Sempur, Bogor. Acara ini diadakan setiap bulan sekali dan terbuka untuk umum. Dalam acara ini, warga dapat menukar barang-barang yang sudah tidak terpakai dengan barang-barang yang dibutuhkan. Acara ini bertujuan untuk mengurangi sampah dan mempererat hubungan antar warga.",
-    },
-    {
-        title: "Fashion Swap Bogor",
-        lat: -6.5850,
-        lng: 106.8200,
-        distance: 1.3,
-        imageUrl: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=300",
-        address: "Jl. Kapten Muslihat No.17 A, RT.04/RW.06, Pabaton, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121",
-        datetime: "20 Maret 2025 | 10:00 - 16:00"
-    }
-]
+const UserData = Users.map(user => ({
+    id: user.id,
+    name: user.name,
+    address: user.address,
+    phone_number: user.phone_number
+}));
 
-const TukarPoinMarker = [
-    {
-        title: "Alfa Midi Bogor Baru",
-        lat: -6.5820,
-        lng: 106.8050,
-        distance: 0.7,
-        imageUrl: "https://images.unsplash.com/photo-1604719312566-8912e9c8a213?q=80&w=300",
-        address: "Jl. Pajajaran No. 123, Bogor Tengah, Kota Bogor"
-    },
-    {
-        title: "Indomaret Plus Pajajaran",
-        lat: -6.5940,
-        lng: 106.7980,
-        distance: 1.1,
-        imageUrl: "https://images.unsplash.com/photo-1567346953138-1ed130169bca?q=80&w=300",
-        address: "Jl. Pajajaran No. 57, Baranangsiang, Kota Bogor"
-    },
-    {
-        title: "Bank Sampah Hijau",
-        lat: -6.5750,
-        lng: 106.8000,
-        distance: 1.6,
-        imageUrl: "https://images.unsplash.com/photo-1571724434581-141ac057eb1c?q=80&w=300",
-        address: "Botani Square Lantai 2, Jl. Raya Pajajaran No. 69, Tegallega, Kota Bogor"
-    },
-    {
-        title: "Toko Zero Waste Bogor",
-        lat: -6.5890,
-        lng: 106.8250,
-        distance: 1.9,
-        imageUrl: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=300",
-        address: "Jl. Siliwangi No. 88, Sukasari, Kota Bogor"
-    }
-]
+const categories = ["pakaian atas", "pakaian bawah", "pakaian dalam", "aksesoris"];
+const getRandomCategory = () => categories[Math.floor(Math.random() * categories.length)];
 
-export { ItemsProduct };
+const ProductData = [
+    {
+        id: 1,
+        title: "Product 1",
+        description: "Description for product 1",
+        status: "available",
+        user_id: 1,
+        price: 100,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 1",
+        category: getRandomCategory()
+    },
+    {
+        id: 2,
+        title: "Product 2",
+        description: "Description for product 2",
+        status: "out of stock",
+        user_id: 2,
+        price: 200,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 2",
+        category: getRandomCategory()
+    },
+    {
+        id: 3,
+        title: "Product 3",
+        description: "Description for product 3",
+        status: "available",
+        user_id: 3,
+        price: 300,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 3",
+        category: getRandomCategory()
+    },
+    {
+        id: 4,
+        title: "Product 4",
+        description: "Description for product 4",
+        status: "available",
+        user_id: 4,
+        price: 400,
+        average_ratings: 4.8,
+        product_desc: "Detailed description for product 4",
+        category: getRandomCategory()
+    },
+    {
+        id: 5,
+        title: "Product 5",
+        description: "Description for product 5",
+        status: "out of stock",
+        user_id: 5,
+        price: 500,
+        average_ratings: 3.9,
+        product_desc: "Detailed description for product 5",
+        category: getRandomCategory()
+    },
+    {
+        id: 6,
+        title: "Product 6",
+        description: "Description for product 6",
+        status: "available",
+        user_id: 6,
+        price: 600,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 6",
+        category: getRandomCategory()
+    },
+    {
+        id: 7,
+        title: "Product 7",
+        description: "Description for product 7",
+        status: "available",
+        user_id: 7,
+        price: 700,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 7",
+        category: getRandomCategory()
+    },
+    {
+        id: 8,
+        title: "Product 8",
+        description: "Description for product 8",
+        status: "out of stock",
+        user_id: 8,
+        price: 800,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 8",
+        category: getRandomCategory()
+    },
+    {
+        id: 9,
+        title: "Product 9",
+        description: "Description for product 9",
+        status: "available",
+        user_id: 9,
+        price: 900,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 9",
+        category: getRandomCategory()
+    },
+    {
+        id: 10,
+        title: "Product 10",
+        description: "Description for product 10",
+        status: "available",
+        user_id: 10,
+        price: 1000,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 10",
+        category: getRandomCategory()
+    },
+    {
+        id: 11,
+        title: "Product 11",
+        description: "Description for product 11",
+        status: "out of stock",
+        user_id: 11,
+        price: 1100,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 11",
+        category: getRandomCategory()
+    },
+    {
+        id: 12,
+        title: "Product 12",
+        description: "Description for product 12",
+        status: "available",
+        user_id: 12,
+        price: 1200,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 12",
+        category: getRandomCategory()
+    },
+    {
+        id: 13,
+        title: "Product 13",
+        description: "Description for product 13",
+        status: "available",
+        user_id: 13,
+        price: 1300,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 13",
+        category: getRandomCategory()
+    },
+    {
+        id: 14,
+        title: "Product 14",
+        description: "Description for product 14",
+        status: "out of stock",
+        user_id: 14,
+        price: 1400,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 14",
+        category: getRandomCategory()
+    },
+    {
+        id: 15,
+        title: "Product 15",
+        description: "Description for product 15",
+        status: "available",
+        user_id: 15,
+        price: 1500,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 15",
+        category: getRandomCategory()
+    },
+    {
+        id: 16,
+        title: "Product 16",
+        description: "Description for product 16",
+        status: "available",
+        user_id: 16,
+        price: 1600,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 16",
+        category: getRandomCategory()
+    },
+    {
+        id: 17,
+        title: "Product 17",
+        description: "Description for product 17",
+        status: "out of stock",
+        user_id: 17,
+        price: 1700,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 17",
+        category: getRandomCategory()
+    },
+    {
+        id: 18,
+        title: "Product 18",
+        description: "Description for product 18",
+        status: "available",
+        user_id: 18,
+        price: 1800,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 18",
+        category: getRandomCategory()
+    },
+    {
+        id: 19,
+        title: "Product 19",
+        description: "Description for product 19",
+        status: "available",
+        user_id: 19,
+        price: 1900,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 19",
+        category: getRandomCategory()
+    },
+    {
+        id: 20,
+        title: "Product 20",
+        description: "Description for product 20",
+        status: "out of stock",
+        user_id: 20,
+        price: 2000,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 20",
+        category: getRandomCategory()
+    },
+    {
+        id: 21,
+        title: "Product 21",
+        description: "Description for product 21",
+        status: "available",
+        user_id: 21,
+        price: 2100,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 21",
+        category: getRandomCategory()
+    },
+    {
+        id: 22,
+        title: "Product 22",
+        description: "Description for product 22",
+        status: "available",
+        user_id: 22,
+        price: 2200,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 22",
+        category: getRandomCategory()
+    },
+    {
+        id: 23,
+        title: "Product 23",
+        description: "Description for product 23",
+        status: "out of stock",
+        user_id: 23,
+        price: 2300,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 23",
+        category: getRandomCategory()
+    },
+    {
+        id: 24,
+        title: "Product 24",
+        description: "Description for product 24",
+        status: "available",
+        user_id: 24,
+        price: 2400,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 24",
+        category: getRandomCategory()
+    },
+    {
+        id: 25,
+        title: "Product 25",
+        description: "Description for product 25",
+        status: "available",
+        user_id: 25,
+        price: 2500,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 25",
+        category: getRandomCategory()
+    },
+    {
+        id: 26,
+        title: "Product 26",
+        description: "Description for product 26",
+        status: "out of stock",
+        user_id: 26,
+        price: 2600,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 26",
+        category: getRandomCategory()
+    },
+    {
+        id: 27,
+        title: "Product 27",
+        description: "Description for product 27",
+        status: "available",
+        user_id: 27,
+        price: 2700,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 27",
+        category: getRandomCategory()
+    },
+    {
+        id: 28,
+        title: "Product 28",
+        description: "Description for product 28",
+        status: "available",
+        user_id: 28,
+        price: 2800,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 28",
+        category: getRandomCategory()
+    },
+    {
+        id: 29,
+        title: "Product 29",
+        description: "Description for product 29",
+        status: "out of stock",
+        user_id: 29,
+        price: 2900,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 29",
+        category: getRandomCategory()
+    },
+    {
+        id: 30,
+        title: "Product 30",
+        description: "Description for product 30",
+        status: "available",
+        user_id: 30,
+        price: 3000,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 30",
+        category: getRandomCategory()
+    }
+    ,
+    {
+        id: 31,
+        title: "Product 31",
+        description: "Description for product 31",
+        status: "available",
+        user_id: 31,
+        price: 3100,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 31",
+        category: getRandomCategory()
+    },
+    {
+        id: 32,
+        title: "Product 32",
+        description: "Description for product 32",
+        status: "out of stock",
+        user_id: 32,
+        price: 3200,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 32",
+        category: getRandomCategory()
+    },
+    {
+        id: 33,
+        title: "Product 33",
+        description: "Description for product 33",
+        status: "available",
+        user_id: 33,
+        price: 3300,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 33",
+        category: getRandomCategory()
+    },
+    {
+        id: 34,
+        title: "Product 34",
+        description: "Description for product 34",
+        status: "available",
+        user_id: 34,
+        price: 3400,
+        average_ratings: 4.8,
+        product_desc: "Detailed description for product 34",
+        category: getRandomCategory()
+    },
+    {
+        id: 35,
+        title: "Product 35",
+        description: "Description for product 35",
+        status: "out of stock",
+        user_id: 35,
+        price: 3500,
+        average_ratings: 3.9,
+        product_desc: "Detailed description for product 35",
+        category: getRandomCategory()
+    },
+    {
+        id: 36,
+        title: "Product 36",
+        description: "Description for product 36",
+        status: "available",
+        user_id: 36,
+        price: 3600,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 36",
+        category: getRandomCategory()
+    },
+    {
+        id: 37,
+        title: "Product 37",
+        description: "Description for product 37",
+        status: "available",
+        user_id: 37,
+        price: 3700,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 37",
+        category: getRandomCategory()
+    },
+    {
+        id: 38,
+        title: "Product 38",
+        description: "Description for product 38",
+        status: "out of stock",
+        user_id: 38,
+        price: 3800,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 38",
+        category: getRandomCategory()
+    },
+    {
+        id: 39,
+        title: "Product 39",
+        description: "Description for product 39",
+        status: "available",
+        user_id: 39,
+        price: 3900,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 39",
+        category: getRandomCategory()
+    },
+    {
+        id: 40,
+        title: "Product 40",
+        description: "Description for product 40",
+        status: "available",
+        user_id: 40,
+        price: 4000,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 40",
+        category: getRandomCategory()
+    },
+    {
+        id: 41,
+        title: "Product 41",
+        description: "Description for product 41",
+        status: "out of stock",
+        user_id: 41,
+        price: 4100,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 41",
+        category: getRandomCategory()
+    },
+    {
+        id: 42,
+        title: "Product 42",
+        description: "Description for product 42",
+        status: "available",
+        user_id: 42,
+        price: 4200,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 42",
+        category: getRandomCategory()
+    },
+    {
+        id: 43,
+        title: "Product 43",
+        description: "Description for product 43",
+        status: "available",
+        user_id: 43,
+        price: 4300,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 43",
+        category: getRandomCategory()
+    },
+    {
+        id: 44,
+        title: "Product 44",
+        description: "Description for product 44",
+        status: "out of stock",
+        user_id: 44,
+        price: 4400,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 44",
+        category: getRandomCategory()
+    },
+    {
+        id: 45,
+        title: "Product 45",
+        description: "Description for product 45",
+        status: "available",
+        user_id: 45,
+        price: 4500,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 45",
+        category: getRandomCategory()
+    },
+    {
+        id: 46,
+        title: "Product 46",
+        description: "Description for product 46",
+        status: "available",
+        user_id: 46,
+        price: 4600,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 46",
+        category: getRandomCategory()
+    },
+    {
+        id: 47,
+        title: "Product 47",
+        description: "Description for product 47",
+        status: "out of stock",
+        user_id: 47,
+        price: 4700,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 47",
+        category: getRandomCategory()
+    },
+    {
+        id: 48,
+        title: "Product 48",
+        description: "Description for product 48",
+        status: "available",
+        user_id: 48,
+        price: 4800,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 48",
+        category: getRandomCategory()
+    },
+    {
+        id: 49,
+        title: "Product 49",
+        description: "Description for product 49",
+        status: "available",
+        user_id: 49,
+        price: 4900,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 49",
+        category: getRandomCategory()
+    },
+    {
+        id: 50,
+        title: "Product 50",
+        description: "Description for product 50",
+        status: "out of stock",
+        user_id: 50,
+        price: 5000,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 50",
+        category: getRandomCategory()
+    },
+    {
+        id: 51,
+        title: "Product 51",
+        description: "Description for product 51",
+        status: "available",
+        user_id: 51,
+        price: 5100,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 51",
+        category: getRandomCategory()
+    },
+    {
+        id: 52,
+        title: "Product 52",
+        description: "Description for product 52",
+        status: "available",
+        user_id: 52,
+        price: 5200,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 52",
+        category: getRandomCategory()
+    },
+    {
+        id: 53,
+        title: "Product 53",
+        description: "Description for product 53",
+        status: "out of stock",
+        user_id: 53,
+        price: 5300,
+        average_ratings: 4.0,
+        product_desc: "Detailed description for product 53",
+        category: getRandomCategory()
+    },
+    {
+        id: 54,
+        title: "Product 54",
+        description: "Description for product 54",
+        status: "available",
+        user_id: 54,
+        price: 5400,
+        average_ratings: 4.5,
+        product_desc: "Detailed description for product 54",
+        category: getRandomCategory()
+    },
+    {
+        id: 55,
+        title: "Product 55",
+        description: "Description for product 55",
+        status: "available",
+        user_id: 55,
+        price: 5500,
+        average_ratings: 4.2,
+        product_desc: "Detailed description for product 55",
+        category: getRandomCategory()
+    },
+    {
+        id: 56,
+        title: "Product 56",
+        description: "Description for product 56",
+        status: "out of stock",
+        user_id: 56,
+        price: 5600,
+        average_ratings: 4.1,
+        product_desc: "Detailed description for product 56",
+        category: getRandomCategory()
+    },
+    {
+        id: 57,
+        title: "Product 57",
+        description: "Description for product 57",
+        status: "available",
+        user_id: 57,
+        price: 5700,
+        average_ratings: 4.3,
+        product_desc: "Detailed description for product 57",
+        category: getRandomCategory()
+    },
+    {
+        id: 58,
+        title: "Product 58",
+        description: "Description for product 58",
+        status: "available",
+        user_id: 58,
+        price: 5800,
+        average_ratings: 4.6,
+        product_desc: "Detailed description for product 58",
+        category: getRandomCategory()
+    },
+    {
+        id: 59,
+        title: "Product 59",
+        description: "Description for product 59",
+        status: "out of stock",
+        user_id: 59,
+        price: 5900,
+        average_ratings: 4.4,
+        product_desc: "Detailed description for product 59",
+        category: getRandomCategory()
+    },
+    {
+        id: 60,
+        title: "Product 60",
+        description: "Description for product 60",
+        status: "available",
+        user_id: 60,
+        price: 6000,
+        average_ratings: 4.7,
+        product_desc: "Detailed description for product 60",
+        category: getRandomCategory()
+    }
+,
+{
+    id: 61,
+    title: "Product 61",
+    description: "Description for product 61",
+    status: "available",
+    user_id: 61,
+    price: 6100,
+    average_ratings: 4.5,
+    product_desc: "Detailed description for product 61",
+    category: getRandomCategory()
+},
+{
+    id: 62,
+    title: "Product 62",
+    description: "Description for product 62",
+    status: "out of stock",
+    user_id: 62,
+    price: 6200,
+    average_ratings: 4.0,
+    product_desc: "Detailed description for product 62",
+    category: getRandomCategory()
+},
+{
+    id: 63,
+    title: "Product 63",
+    description: "Description for product 63",
+    status: "available",
+    user_id: 63,
+    price: 6300,
+    average_ratings: 4.2,
+    product_desc: "Detailed description for product 63",
+    category: getRandomCategory()
+},
+{
+    id: 64,
+    title: "Product 64",
+    description: "Description for product 64",
+    status: "available",
+    user_id: 64,
+    price: 6400,
+    average_ratings: 4.8,
+    product_desc: "Detailed description for product 64",
+    category: getRandomCategory()
+},
+{
+    id: 65,
+    title: "Product 65",
+    description: "Description for product 65",
+    status: "out of stock",
+    user_id: 65,
+    price: 6500,
+    average_ratings: 3.9,
+    product_desc: "Detailed description for product 65",
+    category: getRandomCategory()
+},
+{
+    id: 66,
+    title: "Product 66",
+    description: "Description for product 66",
+    status: "available",
+    user_id: 66,
+    price: 6600,
+    average_ratings: 4.1,
+    product_desc: "Detailed description for product 66",
+    category: getRandomCategory()
+},
+{
+    id: 67,
+    title: "Product 67",
+    description: "Description for product 67",
+    status: "available",
+    user_id: 67,
+    price: 6700,
+    average_ratings: 4.3,
+    product_desc: "Detailed description for product 67",
+    category: getRandomCategory()
+},
+{
+    id: 68,
+    title: "Product 68",
+    description: "Description for product 68",
+    status: "out of stock",
+    user_id: 68,
+    price: 6800,
+    average_ratings: 4.7,
+    product_desc: "Detailed description for product 68",
+    category: getRandomCategory()
+},
+{
+    id: 69,
+    title: "Product 69",
+    description: "Description for product 69",
+    status: "available",
+    user_id: 69,
+    price: 6900,
+    average_ratings: 4.6,
+    product_desc: "Detailed description for product 69",
+    category: getRandomCategory()
+},
+{
+    id: 70,
+    title: "Product 70",
+    description: "Description for product 70",
+    status: "available",
+    user_id: 70,
+    price: 7000,
+    average_ratings: 4.4,
+    product_desc: "Detailed description for product 70",
+    category: getRandomCategory()
+},
+{
+    id: 71,
+    title: "Product 71",
+    description: "Description for product 71",
+    status: "out of stock",
+    user_id: 71,
+    price: 7100,
+    average_ratings: 4.0,
+    product_desc: "Detailed description for product 71",
+    category: getRandomCategory()
+},
+{
+    id: 72,
+    title: "Product 72",
+    description: "Description for product 72",
+    status: "available",
+    user_id: 72,
+    price: 7200,
+    average_ratings: 4.5,
+    product_desc: "Detailed description for product 72",
+    category: getRandomCategory()
+},
+{
+    id: 73,
+    title: "Product 73",
+    description: "Description for product 73",
+    status: "available",
+    user_id: 73,
+    price: 7300,
+    average_ratings: 4.2,
+    product_desc: "Detailed description for product 73",
+    category: getRandomCategory()
+},
+{
+    id: 74,
+    title: "Product 74",
+    description: "Description for product 74",
+    status: "out of stock",
+    user_id: 74,
+    price: 7400,
+    average_ratings: 4.1,
+    product_desc: "Detailed description for product 74",
+    category: getRandomCategory()
+},
+{
+    id: 75,
+    title: "Product 75",
+    description: "Description for product 75",
+    status: "available",
+    user_id: 75,
+    price: 7500,
+    average_ratings: 4.3,
+    product_desc: "Detailed description for product 75",
+    category: getRandomCategory()
+},
+{
+    id: 76,
+    title: "Product 76",
+    description: "Description for product 76",
+    status: "available",
+    user_id: 76,
+    price: 7600,
+    average_ratings: 4.6,
+    product_desc: "Detailed description for product 76",
+    category: getRandomCategory()
+},
+{
+    id: 77,
+    title: "Product 77",
+    description: "Description for product 77",
+    status: "out of stock",
+    user_id: 77,
+    price: 7700,
+    average_ratings: 4.4,
+    product_desc: "Detailed description for product 77",
+    category: getRandomCategory()
+},
+{
+    id: 78,
+    title: "Product 78",
+    description: "Description for product 78",
+    status: "available",
+    user_id: 78,
+    price: 7800,
+    average_ratings: 4.7,
+    product_desc: "Detailed description for product 78",
+    category: getRandomCategory()
+},
+{
+    id: 79,
+    title: "Product 79",
+    description: "Description for product 79",
+    status: "available",
+    user_id: 79,
+    price: 7900,
+    average_ratings: 4.5,
+    product_desc: "Detailed description for product 79",
+    category: getRandomCategory()
+},
+{
+    id: 80,
+    title: "Product 80",
+    description: "Description for product 80",
+    status: "out of stock",
+    user_id: 80,
+    price: 8000,
+    average_ratings: 4.3,
+    product_desc: "Detailed description for product 80",
+    category: getRandomCategory()
+},
+{
+    id: 81,
+    title: "Product 81",
+    description: "Description for product 81",
+    status: "available",
+    user_id: 81,
+    price: 8100,
+    average_ratings: 4.2,
+    product_desc: "Detailed description for product 81",
+    category: getRandomCategory()
+},
+{
+    id: 82,
+    title: "Product 82",
+    description: "Description for product 82",
+    status: "available",
+    user_id: 82,
+    price: 8200,
+    average_ratings: 4.1,
+    product_desc: "Detailed description for product 82",
+    category: getRandomCategory()
+},
+{
+    id: 83,
+    title: "Product 83",
+    description: "Description for product 83",
+    status: "out of stock",
+    user_id: 83,
+    price: 8300,
+    average_ratings: 4.0,
+    product_desc: "Detailed description for product 83",
+    category: getRandomCategory()
+},
+{
+    id: 84,
+    title: "Product 84",
+    description: "Description for product 84",
+    status: "available",
+    user_id: 84,
+    price: 8400,
+    average_ratings: 4.5,
+    product_desc: "Detailed description for product 84",
+    category: getRandomCategory()
+},
+{
+    id: 85,
+    title: "Product 85",
+    description: "Description for product 85",
+    status: "available",
+    user_id: 85,
+    price: 8500,
+    average_ratings: 4.2,
+    product_desc: "Detailed description for product 85",
+    category: getRandomCategory()
+},
+{
+    id: 86,
+    title: "Product 86",
+    description: "Description for product 86",
+    status: "out of stock",
+    user_id: 86,
+    price: 8600,
+    average_ratings: 4.1,
+    product_desc: "Detailed description for product 86",
+    category: getRandomCategory()
+},
+{
+    id: 87,
+    title: "Product 87",
+    description: "Description for product 87",
+    status: "available",
+    user_id: 87,
+    price: 8700,
+    average_ratings: 4.3,
+    product_desc: "Detailed description for product 87",
+    category: getRandomCategory()
+},
+{
+    id: 88,
+    title: "Product 88",
+    description: "Description for product 88",
+    status: "available",
+    user_id: 88,
+    price: 8800,
+    average_ratings: 4.6,
+    product_desc: "Detailed description for product 88",
+    category: getRandomCategory()
+},
+{
+    id: 89,
+    title: "Product 89",
+    description: "Description for product 89",
+    status: "out of stock",
+    user_id: 89,
+    price: 8900,
+    average_ratings: 4.4,
+    product_desc: "Detailed description for product 89",
+    category: getRandomCategory()
+},
+{
+    id: 90,
+    title: "Product 90",
+    description: "Description for product 90",
+    status: "available",
+    user_id: 90,
+    price: 9000,
+    average_ratings: 4.7,
+    product_desc: "Detailed description for product 90",
+    category: getRandomCategory()
+},
+{
+    id: 91,
+    title: "Product 91",
+    description: "Description for product 91",
+    status: "available",
+    user_id: 91,
+    price: 9100,
+    average_ratings: 4.5,
+    product_desc: "Detailed description for product 91",
+    category: getRandomCategory()
+},
+{
+    id: 92,
+    title: "Product 92",
+    description: "Description for product 92",
+    status: "out of stock",
+    user_id: 92,
+    price: 9200,
+    average_ratings: 4.0,
+    product_desc: "Detailed description for product 92",
+    category: getRandomCategory()
+},
+{
+    id: 93,
+    title: "Product 93",
+    description: "Description for product 93",
+    status: "available",
+    user_id: 93,
+    price: 9300,
+    average_ratings: 4.2,
+    product_desc: "Detailed description for product 93",
+    category: getRandomCategory()
+},
+{
+    id: 94,
+    title: "Product 94",
+    description: "Description for product 94",
+    status: "available",
+    user_id: 94,
+    price: 9400,
+    average_ratings: 4.8,
+    product_desc: "Detailed description for product 94",
+    category: getRandomCategory()
+},
+{
+    id: 95,
+    title: "Product 95",
+    description: "Description for product 95",
+    status: "out of stock",
+    user_id: 95,
+    price: 9500,
+    average_ratings: 3.9,
+    product_desc: "Detailed description for product 95",
+    category: getRandomCategory()
+},
+{
+    id: 96,
+    title: "Product 96",
+    description: "Description for product 96",
+    status: "available",
+    user_id: 96,
+    price: 9600,
+    average_ratings: 4.1,
+    product_desc: "Detailed description for product 96",
+    category: getRandomCategory()
+},
+{
+    id: 97,
+    title: "Product 97",
+    description: "Description for product 97",
+    status: "available",
+    user_id: 97,
+    price: 9700,
+    average_ratings: 4.3,
+    product_desc: "Detailed description for product 97",
+    category: getRandomCategory()
+},
+{
+    id: 98,
+    title: "Product 98",
+    description: "Description for product 98",
+    status: "out of stock",
+    user_id: 98,
+    price: 9800,
+    average_ratings: 4.7,
+    product_desc: "Detailed description for product 98",
+    category: getRandomCategory()
+},
+{
+    id: 99,
+    title: "Product 99",
+    description: "Description for product 99",
+    status: "available",
+    user_id: 99,
+    price: 9900,
+    average_ratings: 4.6,
+    product_desc: "Detailed description for product 99",
+    category: getRandomCategory()
+},
+{
+    id: 100,
+    title: "Product 100",
+    description: "Description for product 100",
+    status: "available",
+    user_id: 100,
+    price: 10000,
+    average_ratings: 4.4,
+    product_desc: "Detailed description for product 100",
+    category: getRandomCategory()
+}
+];
+
+export { UserData };

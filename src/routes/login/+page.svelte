@@ -1,16 +1,47 @@
 <script>
-    let name = '';
+    import Users from '../../data/UserData'; // Adjust the path as necessary
+
     let email = '';
     let password = '';
+    /**
+     * @type {{ id: number, email: string, name: string, password: string, address: string, phone_number: string } | null}
+     */
+    let user = null;
+    /** @type {HTMLDialogElement} */
+    let modalSuccess;
+    /** @type {HTMLDialogElement} */
+    let modalFailed;
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Handle login logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
+        user = Users.find(user => user.email === email && user.password === password) || null;
+        if (user) {
+            console.log('Login successful:', user);
+            modalSuccess.showModal();
+            setTimeout(() => {
+                window.location.href = '/home';
+            }, 2000); // Redirect after 2 seconds
+        } else {
+            console.log('Invalid email or password');
+            modalFailed.showModal();
+        }
     };
 </script>
 
+<dialog bind:this={modalSuccess} id="modal_success" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box text-center">
+      <h3 class="text-3xl font-bold">Login successful!</h3>
+      <p class="py-4 text-xl">Welcome, {user ? user.name : ''}!</p>
+      <img src="../../assets/Success.mp4" alt="success" class="w-36 h-36" />
+    </div>
+</dialog>
+
+<dialog bind:this={modalFailed} id="modal_failed" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box text-center">
+      <h3 class="text-3xl font-bold">Login failed!</h3>
+      <p class="py-4 text-xl">Invalid email or password. Please try again.</p>
+    </div>
+</dialog>
 <div class="flex justify-center items-center min-h-screen bg-gray-100">
     <div class="w-3xl max-w-4xl shadow-xl grid grid-cols-1 md:grid-cols-2">
         <div class="card w-96 max-w-4xl bg-white shadow-xl p-6 rounded-bl-lg rounded-tl-lg  grid grid-cols-1 md:grid-cols-1 gap-6">
