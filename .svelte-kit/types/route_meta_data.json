@@ -2,6 +2,7 @@
 	"/": [],
 	"/login": [],
 	"/marketplace": [],
+	"/marketplace/product/[id]": [],
 	"/register": [],
 	"/temutukar": []
 }

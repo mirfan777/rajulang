@@ -18,6 +18,7 @@ const ProductData = [
         status: "available",
         user_id: 1,
         price: 100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 1",
         category: getRandomCategory()
@@ -29,6 +30,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 2,
         price: 200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 2",
         category: getRandomCategory()
@@ -40,6 +42,7 @@ const ProductData = [
         status: "available",
         user_id: 3,
         price: 300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 3",
         category: getRandomCategory()
@@ -51,6 +54,7 @@ const ProductData = [
         status: "available",
         user_id: 4,
         price: 400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.8,
         product_desc: "Detailed description for product 4",
         category: getRandomCategory()
@@ -62,6 +66,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 5,
         price: 500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 3.9,
         product_desc: "Detailed description for product 5",
         category: getRandomCategory()
@@ -73,6 +78,7 @@ const ProductData = [
         status: "available",
         user_id: 6,
         price: 600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 6",
         category: getRandomCategory()
@@ -84,6 +90,7 @@ const ProductData = [
         status: "available",
         user_id: 7,
         price: 700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 7",
         category: getRandomCategory()
@@ -95,6 +102,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 8,
         price: 800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 8",
         category: getRandomCategory()
@@ -106,6 +114,7 @@ const ProductData = [
         status: "available",
         user_id: 9,
         price: 900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 9",
         category: getRandomCategory()
@@ -117,6 +126,7 @@ const ProductData = [
         status: "available",
         user_id: 10,
         price: 1000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 10",
         category: getRandomCategory()
@@ -128,6 +138,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 11,
         price: 1100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 11",
         category: getRandomCategory()
@@ -139,6 +150,7 @@ const ProductData = [
         status: "available",
         user_id: 12,
         price: 1200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 12",
         category: getRandomCategory()
@@ -150,6 +162,7 @@ const ProductData = [
         status: "available",
         user_id: 13,
         price: 1300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 13",
         category: getRandomCategory()
@@ -161,6 +174,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 14,
         price: 1400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 14",
         category: getRandomCategory()
@@ -172,6 +186,7 @@ const ProductData = [
         status: "available",
         user_id: 15,
         price: 1500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 15",
         category: getRandomCategory()
@@ -183,6 +198,7 @@ const ProductData = [
         status: "available",
         user_id: 16,
         price: 1600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 16",
         category: getRandomCategory()
@@ -194,6 +210,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 17,
         price: 1700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 17",
         category: getRandomCategory()
@@ -205,6 +222,7 @@ const ProductData = [
         status: "available",
         user_id: 18,
         price: 1800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 18",
         category: getRandomCategory()
@@ -216,6 +234,7 @@ const ProductData = [
         status: "available",
         user_id: 19,
         price: 1900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 19",
         category: getRandomCategory()
@@ -227,6 +246,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 20,
         price: 2000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 20",
         category: getRandomCategory()
@@ -238,6 +258,7 @@ const ProductData = [
         status: "available",
         user_id: 21,
         price: 2100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 21",
         category: getRandomCategory()
@@ -249,6 +270,7 @@ const ProductData = [
         status: "available",
         user_id: 22,
         price: 2200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 22",
         category: getRandomCategory()
@@ -260,6 +282,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 23,
         price: 2300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 23",
         category: getRandomCategory()
@@ -271,6 +294,7 @@ const ProductData = [
         status: "available",
         user_id: 24,
         price: 2400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 24",
         category: getRandomCategory()
@@ -282,6 +306,7 @@ const ProductData = [
         status: "available",
         user_id: 25,
         price: 2500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 25",
         category: getRandomCategory()
@@ -293,6 +318,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 26,
         price: 2600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 26",
         category: getRandomCategory()
@@ -304,6 +330,7 @@ const ProductData = [
         status: "available",
         user_id: 27,
         price: 2700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 27",
         category: getRandomCategory()
@@ -315,6 +342,7 @@ const ProductData = [
         status: "available",
         user_id: 28,
         price: 2800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 28",
         category: getRandomCategory()
@@ -326,6 +354,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 29,
         price: 2900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 29",
         category: getRandomCategory()
@@ -337,6 +366,7 @@ const ProductData = [
         status: "available",
         user_id: 30,
         price: 3000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 30",
         category: getRandomCategory()
@@ -349,6 +379,7 @@ const ProductData = [
         status: "available",
         user_id: 31,
         price: 3100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 31",
         category: getRandomCategory()
@@ -360,6 +391,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 32,
         price: 3200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 32",
         category: getRandomCategory()
@@ -371,6 +403,7 @@ const ProductData = [
         status: "available",
         user_id: 33,
         price: 3300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 33",
         category: getRandomCategory()
@@ -382,6 +415,7 @@ const ProductData = [
         status: "available",
         user_id: 34,
         price: 3400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.8,
         product_desc: "Detailed description for product 34",
         category: getRandomCategory()
@@ -393,6 +427,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 35,
         price: 3500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 3.9,
         product_desc: "Detailed description for product 35",
         category: getRandomCategory()
@@ -404,6 +439,7 @@ const ProductData = [
         status: "available",
         user_id: 36,
         price: 3600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 36",
         category: getRandomCategory()
@@ -415,6 +451,7 @@ const ProductData = [
         status: "available",
         user_id: 37,
         price: 3700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 37",
         category: getRandomCategory()
@@ -426,6 +463,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 38,
         price: 3800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 38",
         category: getRandomCategory()
@@ -437,6 +475,7 @@ const ProductData = [
         status: "available",
         user_id: 39,
         price: 3900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 39",
         category: getRandomCategory()
@@ -448,6 +487,7 @@ const ProductData = [
         status: "available",
         user_id: 40,
         price: 4000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 40",
         category: getRandomCategory()
@@ -459,6 +499,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 41,
         price: 4100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 41",
         category: getRandomCategory()
@@ -470,6 +511,7 @@ const ProductData = [
         status: "available",
         user_id: 42,
         price: 4200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 42",
         category: getRandomCategory()
@@ -481,6 +523,7 @@ const ProductData = [
         status: "available",
         user_id: 43,
         price: 4300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 43",
         category: getRandomCategory()
@@ -492,6 +535,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 44,
         price: 4400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 44",
         category: getRandomCategory()
@@ -503,6 +547,7 @@ const ProductData = [
         status: "available",
         user_id: 45,
         price: 4500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 45",
         category: getRandomCategory()
@@ -514,6 +559,7 @@ const ProductData = [
         status: "available",
         user_id: 46,
         price: 4600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 46",
         category: getRandomCategory()
@@ -525,6 +571,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 47,
         price: 4700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 47",
         category: getRandomCategory()
@@ -536,6 +583,7 @@ const ProductData = [
         status: "available",
         user_id: 48,
         price: 4800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 48",
         category: getRandomCategory()
@@ -547,6 +595,7 @@ const ProductData = [
         status: "available",
         user_id: 49,
         price: 4900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 49",
         category: getRandomCategory()
@@ -558,6 +607,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 50,
         price: 5000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 50",
         category: getRandomCategory()
@@ -569,6 +619,7 @@ const ProductData = [
         status: "available",
         user_id: 51,
         price: 5100,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 51",
         category: getRandomCategory()
@@ -580,6 +631,7 @@ const ProductData = [
         status: "available",
         user_id: 52,
         price: 5200,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 52",
         category: getRandomCategory()
@@ -591,6 +643,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 53,
         price: 5300,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.0,
         product_desc: "Detailed description for product 53",
         category: getRandomCategory()
@@ -602,6 +655,7 @@ const ProductData = [
         status: "available",
         user_id: 54,
         price: 5400,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.5,
         product_desc: "Detailed description for product 54",
         category: getRandomCategory()
@@ -613,6 +667,7 @@ const ProductData = [
         status: "available",
         user_id: 55,
         price: 5500,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.2,
         product_desc: "Detailed description for product 55",
         category: getRandomCategory()
@@ -624,6 +679,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 56,
         price: 5600,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.1,
         product_desc: "Detailed description for product 56",
         category: getRandomCategory()
@@ -635,6 +691,7 @@ const ProductData = [
         status: "available",
         user_id: 57,
         price: 5700,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.3,
         product_desc: "Detailed description for product 57",
         category: getRandomCategory()
@@ -646,6 +703,7 @@ const ProductData = [
         status: "available",
         user_id: 58,
         price: 5800,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.6,
         product_desc: "Detailed description for product 58",
         category: getRandomCategory()
@@ -657,6 +715,7 @@ const ProductData = [
         status: "out of stock",
         user_id: 59,
         price: 5900,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.4,
         product_desc: "Detailed description for product 59",
         category: getRandomCategory()
@@ -668,6 +727,7 @@ const ProductData = [
         status: "available",
         user_id: 60,
         price: 6000,
+        image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
         average_ratings: 4.7,
         product_desc: "Detailed description for product 60",
         category: getRandomCategory()
@@ -680,6 +740,7 @@ const ProductData = [
     status: "available",
     user_id: 61,
     price: 6100,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.5,
     product_desc: "Detailed description for product 61",
     category: getRandomCategory()
@@ -691,6 +752,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 62,
     price: 6200,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.0,
     product_desc: "Detailed description for product 62",
     category: getRandomCategory()
@@ -702,6 +764,7 @@ const ProductData = [
     status: "available",
     user_id: 63,
     price: 6300,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.2,
     product_desc: "Detailed description for product 63",
     category: getRandomCategory()
@@ -713,6 +776,7 @@ const ProductData = [
     status: "available",
     user_id: 64,
     price: 6400,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.8,
     product_desc: "Detailed description for product 64",
     category: getRandomCategory()
@@ -724,6 +788,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 65,
     price: 6500,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 3.9,
     product_desc: "Detailed description for product 65",
     category: getRandomCategory()
@@ -735,6 +800,7 @@ const ProductData = [
     status: "available",
     user_id: 66,
     price: 6600,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.1,
     product_desc: "Detailed description for product 66",
     category: getRandomCategory()
@@ -746,6 +812,7 @@ const ProductData = [
     status: "available",
     user_id: 67,
     price: 6700,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.3,
     product_desc: "Detailed description for product 67",
     category: getRandomCategory()
@@ -757,6 +824,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 68,
     price: 6800,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.7,
     product_desc: "Detailed description for product 68",
     category: getRandomCategory()
@@ -768,6 +836,7 @@ const ProductData = [
     status: "available",
     user_id: 69,
     price: 6900,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.6,
     product_desc: "Detailed description for product 69",
     category: getRandomCategory()
@@ -779,6 +848,7 @@ const ProductData = [
     status: "available",
     user_id: 70,
     price: 7000,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.4,
     product_desc: "Detailed description for product 70",
     category: getRandomCategory()
@@ -790,6 +860,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 71,
     price: 7100,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.0,
     product_desc: "Detailed description for product 71",
     category: getRandomCategory()
@@ -801,6 +872,7 @@ const ProductData = [
     status: "available",
     user_id: 72,
     price: 7200,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.5,
     product_desc: "Detailed description for product 72",
     category: getRandomCategory()
@@ -812,6 +884,7 @@ const ProductData = [
     status: "available",
     user_id: 73,
     price: 7300,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.2,
     product_desc: "Detailed description for product 73",
     category: getRandomCategory()
@@ -823,6 +896,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 74,
     price: 7400,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.1,
     product_desc: "Detailed description for product 74",
     category: getRandomCategory()
@@ -834,6 +908,7 @@ const ProductData = [
     status: "available",
     user_id: 75,
     price: 7500,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.3,
     product_desc: "Detailed description for product 75",
     category: getRandomCategory()
@@ -845,6 +920,7 @@ const ProductData = [
     status: "available",
     user_id: 76,
     price: 7600,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.6,
     product_desc: "Detailed description for product 76",
     category: getRandomCategory()
@@ -856,6 +932,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 77,
     price: 7700,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.4,
     product_desc: "Detailed description for product 77",
     category: getRandomCategory()
@@ -867,6 +944,7 @@ const ProductData = [
     status: "available",
     user_id: 78,
     price: 7800,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.7,
     product_desc: "Detailed description for product 78",
     category: getRandomCategory()
@@ -878,6 +956,7 @@ const ProductData = [
     status: "available",
     user_id: 79,
     price: 7900,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.5,
     product_desc: "Detailed description for product 79",
     category: getRandomCategory()
@@ -889,6 +968,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 80,
     price: 8000,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.3,
     product_desc: "Detailed description for product 80",
     category: getRandomCategory()
@@ -900,6 +980,7 @@ const ProductData = [
     status: "available",
     user_id: 81,
     price: 8100,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.2,
     product_desc: "Detailed description for product 81",
     category: getRandomCategory()
@@ -911,6 +992,7 @@ const ProductData = [
     status: "available",
     user_id: 82,
     price: 8200,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.1,
     product_desc: "Detailed description for product 82",
     category: getRandomCategory()
@@ -922,6 +1004,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 83,
     price: 8300,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.0,
     product_desc: "Detailed description for product 83",
     category: getRandomCategory()
@@ -933,6 +1016,7 @@ const ProductData = [
     status: "available",
     user_id: 84,
     price: 8400,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.5,
     product_desc: "Detailed description for product 84",
     category: getRandomCategory()
@@ -944,6 +1028,7 @@ const ProductData = [
     status: "available",
     user_id: 85,
     price: 8500,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.2,
     product_desc: "Detailed description for product 85",
     category: getRandomCategory()
@@ -955,6 +1040,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 86,
     price: 8600,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.1,
     product_desc: "Detailed description for product 86",
     category: getRandomCategory()
@@ -966,6 +1052,7 @@ const ProductData = [
     status: "available",
     user_id: 87,
     price: 8700,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.3,
     product_desc: "Detailed description for product 87",
     category: getRandomCategory()
@@ -977,6 +1064,7 @@ const ProductData = [
     status: "available",
     user_id: 88,
     price: 8800,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.6,
     product_desc: "Detailed description for product 88",
     category: getRandomCategory()
@@ -988,6 +1076,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 89,
     price: 8900,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.4,
     product_desc: "Detailed description for product 89",
     category: getRandomCategory()
@@ -999,6 +1088,7 @@ const ProductData = [
     status: "available",
     user_id: 90,
     price: 9000,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.7,
     product_desc: "Detailed description for product 90",
     category: getRandomCategory()
@@ -1010,6 +1100,7 @@ const ProductData = [
     status: "available",
     user_id: 91,
     price: 9100,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.5,
     product_desc: "Detailed description for product 91",
     category: getRandomCategory()
@@ -1021,6 +1112,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 92,
     price: 9200,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.0,
     product_desc: "Detailed description for product 92",
     category: getRandomCategory()
@@ -1032,6 +1124,7 @@ const ProductData = [
     status: "available",
     user_id: 93,
     price: 9300,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.2,
     product_desc: "Detailed description for product 93",
     category: getRandomCategory()
@@ -1043,6 +1136,7 @@ const ProductData = [
     status: "available",
     user_id: 94,
     price: 9400,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.8,
     product_desc: "Detailed description for product 94",
     category: getRandomCategory()
@@ -1054,6 +1148,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 95,
     price: 9500,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 3.9,
     product_desc: "Detailed description for product 95",
     category: getRandomCategory()
@@ -1065,6 +1160,7 @@ const ProductData = [
     status: "available",
     user_id: 96,
     price: 9600,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.1,
     product_desc: "Detailed description for product 96",
     category: getRandomCategory()
@@ -1076,6 +1172,7 @@ const ProductData = [
     status: "available",
     user_id: 97,
     price: 9700,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.3,
     product_desc: "Detailed description for product 97",
     category: getRandomCategory()
@@ -1087,6 +1184,7 @@ const ProductData = [
     status: "out of stock",
     user_id: 98,
     price: 9800,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.7,
     product_desc: "Detailed description for product 98",
     category: getRandomCategory()
@@ -1098,6 +1196,7 @@ const ProductData = [
     status: "available",
     user_id: 99,
     price: 9900,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.6,
     product_desc: "Detailed description for product 99",
     category: getRandomCategory()
@@ -1109,10 +1208,62 @@ const ProductData = [
     status: "available",
     user_id: 100,
     price: 10000,
+    image : "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=300",
     average_ratings: 4.4,
     product_desc: "Detailed description for product 100",
     category: getRandomCategory()
 }
 ];
 
-export { UserData, ProductData };
+const Review = [
+    {
+        id: 1,
+        user: UserData[0],
+        title: "Great Product",
+        descReview: "I really liked this product. It exceeded my expectations.",
+        ratings: 5,
+        product_id: ProductData[0].id
+    },
+    {
+        id: 2,
+        user: UserData[1],
+        title: "Not Bad",
+        descReview: "The product is okay, but could be better.",
+        ratings: 3,
+        product_id: ProductData[1].id
+    },
+    {
+        id: 3,
+        user: UserData[2],
+        title: "Terrible Experience",
+        descReview: "I had a bad experience with this product. It did not work as expected.",
+        ratings: 1,
+        product_id: ProductData[2].id
+    },
+    {
+        id: 4,
+        user: UserData[0],
+        title: "Good Value",
+        descReview: "The product offers good value for the price.",
+        ratings: 4,
+        product_id: ProductData[0].id
+    },
+    {
+        id: 5,
+        user: UserData[1],
+        title: "Average Quality",
+        descReview: "The quality is average, but it serves the purpose.",
+        ratings: 3,
+        product_id: ProductData[1].id
+    },
+    {
+        id: 6,
+        user: UserData[2],
+        title: "Highly Recommend",
+        descReview: "I highly recommend this product. It is worth every penny.",
+        ratings: 5,
+        product_id: ProductData[2].id
+    }
+];
+
+export { UserData, ProductData, Review };
