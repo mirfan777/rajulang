@@ -1115,4 +1115,4 @@ const ProductData = [
 }
 ];
 
-export { UserData };
+export { UserData, ProductData };
