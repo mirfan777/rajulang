@@ -106,7 +106,7 @@
                 <!-- Action buttons -->
                 <div class="card-actions justify-end mt-4">
                     <button class="btn btn-outline">Tambah ke Keranjang</button>
-                    <button class="btn btn-primary">Beli Sekarang</button>
+                    <button class="btn btn-success">Beli Sekarang</button>
                 </div>
             </div>
         </div>

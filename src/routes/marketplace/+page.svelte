@@ -156,7 +156,7 @@
         <div class="absolute top-1/2 transform -translate-y-1/2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
           <!-- svelte-ignore a11y_consider_explicit_label -->
           <button 
-            class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+            class="btn btn-circle btn-success bg-black/50 border-none text-white" 
             on:click={prevSlide}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -166,7 +166,7 @@
         <div class="absolute top-1/2 transform -translate-y-1/2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
           <!-- svelte-ignore a11y_consider_explicit_label -->
           <button 
-            class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+            class="btn btn-circle btn-success bg-black/50 border-none text-white" 
             on:click={nextSlide}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>

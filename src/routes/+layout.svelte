@@ -16,16 +16,16 @@
 		  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
 		  <li><a href="{base}/temutukar">TemuTukar</a></li>
 		  <li><a href="{base}/temutukar">Artikel</a></li>
-		  <li><a href="{base}/temutukar"></a></li>
+		  <li><a href="{base}/marketplace">Marketplace</a></li>
 		</ul>
 	  </div>
-	  <a class="btn btn-ghost hover:bg-[#3e6235] hover:border-[#3e6235] text-xl p-6" href="{base}/"><img src="/src/Assets/images/logo_fillnobg.png" class="w-36 h-10" alt="logo"></a>
+	  <a class="btn btn-ghost hover:bg-[#3e6235] hover:border-[#3e6235] text-xl p-6" href="{base}/"><img src="images/logo_fillnobg.png" class="w-36 h-10" alt="logo"></a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 	  <ul class="menu menu-horizontal px-1 text-white">
 		<li><a href="{base}/temutukar">TemuTukar</a></li>
 		<li><a href="{base}/artikel">Artikel</a></li>
-		<li><a href="/marketplace">Marketplace</a></li>
+		<li><a href="{base}/marketplace">Marketplace</a></li>
 	  </ul>
 	</div>
 	<!-- rightnav -->
@@ -42,7 +42,7 @@
 				  <span class="text-lg font-bold">8 Items</span>
 				  <span class="text-info">Subtotal: $999</span>
 				  <div class="card-actions">
-					<button class="btn btn-primary btn-block">View cart</button>
+					<button class="btn btn-success btn-block">View cart</button>
 				  </div>
 				</div>
 			  </div>
@@ -74,7 +74,7 @@
 
 {@render children()}
 
-<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10 mt-10">
 	<nav>
 	  <h6 class="footer-title">Services</h6>
 	  <a class="link link-hover">Branding</a>

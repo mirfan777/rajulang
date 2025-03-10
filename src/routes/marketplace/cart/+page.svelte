@@ -62,11 +62,11 @@
                                     <div class="flex gap-21">
                                         <div class="avg-rate flex gap-1">
                                             <p class="text-lg">Avg Rate : {item.Rating}</p>
-                                            <img src="/src/Assets/icons/star.svg" alt="rate" class="w-5">
+                                            <img src="icons/star.svg" alt="rate" class="w-5">
                                         </div>
                                         <div class="trash-add flex gap-3">
-                                            <img src="/src/Assets/icons/trash.svg" alt="Hapus dari whislist" class="w-5" />
-                                            <img src="/src/Assets/icons/heart.svg" alt="Tambah ke cart" class="w-5" />
+                                            <img src="icons/trash.svg" alt="Hapus dari whislist" class="w-5" />
+                                            <img src="icons/heart.svg" alt="Tambah ke cart" class="w-5" />
                                             <div class="addorno">
                                                 <div class="flex items-center border  rounded-lg">
                                                     <button on:click={() => updateQuantity(index, -1)} class="px-2 py-1 bg-gray-200 rounded-lg">-</button>

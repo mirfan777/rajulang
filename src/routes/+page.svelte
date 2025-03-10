@@ -96,7 +96,7 @@
       <!-- side navigation buttons -->
       <div class="absolute top-1/2 transform -translate-y-1/2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button 
-          class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+          class="btn btn-circle btn-success bg-black/50 border-none text-white" 
           on:click={prevSlide}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -105,7 +105,7 @@
       
       <div class="absolute top-1/2 transform -translate-y-1/2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button 
-          class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+          class="btn btn-circle btn-success bg-black/50 border-none text-white" 
           on:click={nextSlide}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -116,15 +116,15 @@
     <!-- indicator buttons -->
     <!-- <div class="flex w-full justify-center gap-2 py-2">
       <button 
-        class="btn btn-xs {currentIndex === 0 ? 'btn-primary' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 0 ? 'btn-success' : 'btn-outline'}" 
         on:click={() => goToSlide(0)}
       >1</button>
       <button 
-        class="btn btn-xs {currentIndex === 1 ? 'btn-primary' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 1 ? 'btn-success' : 'btn-outline'}" 
         on:click={() => goToSlide(1)}
       >2</button>
       <button 
-        class="btn btn-xs {currentIndex === 2 ? 'btn-primary' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 2 ? 'btn-success' : 'btn-outline'}" 
         on:click={() => goToSlide(2)}
       >3</button>
     </div> -->
