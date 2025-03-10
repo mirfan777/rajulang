@@ -198,7 +198,7 @@
                 {#each ProductData as product (product.id)}
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <div class="card bg-base-100 lg:w-56 sm:w-48 w-40 h-72 shadow-sm hover:shadow-2xl hover:shadow-slate-200 " on:click={() => window.location.href = `/marketplace/product/${product.id}`}>
+                <div class="card bg-base-100 lg:w-56 sm:w-48 w-40 h-72 shadow-sm hover:shadow-2xl hover:shadow-slate-200 " on:click={() => window.location.href = {base}+`/marketplace/product/${product.id}`}>
                 <figure class="lg:w-56 sm:w-48 w-40 h-40">
                     <img 
                     class="lg:w-56 sm:w-48 w-40 aspect-square h-40 object-cover"
