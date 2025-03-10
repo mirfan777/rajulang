@@ -1,0 +1,1 @@
+import{j as e}from"./CL4d3RLJ.js";function n(s,i,r){var t=s==null?"":""+s;return t===""?null:t}function u(s,i,r,t,f,l){var c=s.__className;if(e||c!==r){var a=n(r);(!e||a!==s.getAttribute("class"))&&(a==null?s.removeAttribute("class"):s.className=a),s.__className=r}return l}export{u as s};

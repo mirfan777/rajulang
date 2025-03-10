@@ -1,0 +1,12 @@
+{
+	"/": [],
+	"/artikel": [],
+	"/login": [],
+	"/marketplace": [],
+	"/marketplace/cart": [],
+	"/marketplace/product/[id]": [],
+	"/notification": [],
+	"/profile": [],
+	"/register": [],
+	"/temutukar": []
+}
