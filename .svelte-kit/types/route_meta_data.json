@@ -3,6 +3,7 @@
 	"/login": [],
 	"/marketplace": [],
 	"/marketplace/product/[id]": [],
+	"/profile": [],
 	"/register": [],
 	"/temutukar": []
 }

@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar px-6 bg-base-100 shadow-sm">
 	<div class="navbar-start">
 	  <div class="dropdown">
 		<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -23,11 +23,19 @@
 	  <ul class="menu menu-horizontal px-1">
 		<li><a href="{base}/temutukar">TemuTukar</a></li>
 		<li><a>Item 2</a></li>
-		<li><a href="">Marketplace</a></li>
+		<li><a href="/marketplace">Marketplace</a></li>
 	  </ul>
 	</div>
 	<div class="navbar-end">
-	  <a class="btn">Button</a>
+		<div class="dropdown">
+			<img role="button" tabindex="0" src="https://static.vecteezy.com/system/resources/thumbnails/020/911/740/small_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="Profile" class="border-solid border w-10 h-10 rounded-full">
+			
+			<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm mr-5">
+			  <li><a href="/login">Login</a></li>
+			  <li><a href="/profile">Profile</a></li>
+			</ul>
+		  </div>
+	  
 	</div>
   </div>
 

@@ -10,13 +10,40 @@
     $: product = ProductData.find(p => p.id == Number(productId));
 </script>
 
-<main class="container mx-auto p-4">
+<main class="container mx-auto p-6">
     {#if product}
-        <h1 class="text-3xl font-bold">{product.title}</h1>
-        <img src={product.image} alt={product.title} class="w-full h-48 object-cover mb-2">
-        <p>{product.description}</p>
-        <p class="text-gray-600">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(product.price)}</p>
+        <div class="card w-auto bg-base-100 shadow-sm grid grid-cols-2 p-1">
+            <figure class="m-4" style="background-image: url({product.image}); background-size: cover; background-position: center;">
+            </figure>
+            <div class="card-body grid grid-cols-1 gap-[-4rem]">
+                <div class="breadcrumbs text-sm">
+                    <ul>
+                    <li><p>Marketplace</p></li>
+                    <li><p>{product.title}</p></li>
+                    </ul>
+                </div>
+                <h2 class="card-title">{product.title}</h2>
+                <p class="text-justify text-xl">Rp {product.price.toLocaleString('id-ID')}</p>
+                <div class="rating">
+                    {#each Array(5) as _, i}
+                        <input type="radio" name="rating-1" class="mask mask-star" aria-label={`${i + 1} star`} checked={product.Rating === i + 1} />
+                    {/each}
+                </div>
+                <!-- Card  -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="text-lg">
+                            Compare
+                        </p> 
+                    </div>
+                </div>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
     {:else}
         <p>Product not found</p>
     {/if}
 </main>
+
