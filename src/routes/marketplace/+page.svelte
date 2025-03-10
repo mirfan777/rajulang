@@ -5,6 +5,11 @@
     import { base } from '$app/paths';
     import { onMount, onDestroy } from 'svelte';
     import { ProductData } from '../../data/ProductData';
+
+    // @ts-ignore
+    function navigateToProduct(id) {
+        window.location.href = base + `/marketplace/product/${id}`;
+    }
     
 
     // @ts-ignore
@@ -32,11 +37,13 @@
         return selectedCategory === 'All' ? ProductData : ProductData.filter(product => product.category === selectedCategory);
     };
     // @ts-ignore
+    // @ts-ignore
     let currentSlide = 0;
 
     let currentPage = 1;
     const itemsPerPage = 15;
 
+    // @ts-ignore
     const paginatedProducts = () => {
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
@@ -45,17 +52,20 @@
 
     const totalPages = Math.ceil(filterProducts().length / itemsPerPage);
 
+    // @ts-ignore
     const nextPage = () => {
         if (currentPage < totalPages) {
             currentPage++;
         }
     };
 
+    // @ts-ignore
     const prevPage = () => {
         if (currentPage > 1) {
             currentPage--;
         }
     };
+    // @ts-ignore
     // @ts-ignore
     let slides = [
         { id: 1, image: 'https://th.bing.com/th/id/OIP.OirGO7swB4uw9cy0_ThQnQHaE7?rs=1&pid=ImgDetMain' },
@@ -198,7 +208,7 @@
                 {#each ProductData as product (product.id)}
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <div class="card bg-base-100 lg:w-56 sm:w-48 w-40 h-72 shadow-sm hover:shadow-2xl hover:shadow-slate-200 " on:click={() => window.location.href = {base}+`/marketplace/product/${product.id}`}>
+                <div class="card bg-base-100 lg:w-56 sm:w-48 w-40 h-72 shadow-sm hover:shadow-2xl hover:shadow-slate-200 "  on:click={() => navigateToProduct(product.id)}>
                 <figure class="lg:w-56 sm:w-48 w-40 h-40">
                     <img 
                     class="lg:w-56 sm:w-48 w-40 aspect-square h-40 object-cover"
