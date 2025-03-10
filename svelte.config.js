@@ -12,7 +12,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-            base: process.env.BASE_PATH || '/rajulang'
+           base: process.env.NODE_ENV === 'production' ? '/rajulang' : ''
         }
 	}
 };
