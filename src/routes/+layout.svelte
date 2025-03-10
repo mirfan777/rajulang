@@ -19,7 +19,7 @@
 		  <li><a href="{base}/temutukar"></a></li>
 		</ul>
 	  </div>
-	  <a class="btn btn-ghost hover:bg-[#3e6235] hover:border-[#3e6235] text-xl p-6" href="{base}/"><img src="images/logo_fillnobg.png" class="w-36 h-10" alt="logo"></a>
+	  <a class="btn btn-ghost hover:bg-[#3e6235] hover:border-[#3e6235] text-xl p-6" href="{base}/"><img src="/src/Assets/images/logo_fillnobg.png" class="w-36 h-10" alt="logo"></a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 	  <ul class="menu menu-horizontal px-1 text-lg">
