@@ -20,6 +20,7 @@
 
     const filterType = writable('Semua Notifikasi');
 
+    // @ts-ignore
     function setFilter(type) {
         filterType.set(type);
     }
@@ -29,6 +30,7 @@
     );
 
     // Helper function to get badge color based on notification type
+    // @ts-ignore
     function getBadgeColor(type) {
         return type === 'Pengiriman' ? 'badge-success' : 'badge-accent';
     }

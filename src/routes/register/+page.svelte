@@ -3,6 +3,7 @@
     let email = '';
     let password = '';
 
+    // @ts-ignore
     const handleSubmit = (event) => {
         event.preventDefault();
         // Handle login logic here

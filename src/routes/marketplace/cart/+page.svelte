@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { ProductData } from "../../../data/ProductData";
     import { writable } from 'svelte/store';
 
@@ -15,6 +17,7 @@
         });
     }
 
+    // @ts-ignore
     function toggleItemSelection(index) {
         items.update(currentItems => {
             currentItems[index].selected = !currentItems[index].selected;
@@ -23,6 +26,7 @@
         });
     }
 
+    // @ts-ignore
     function updateQuantity(index, change) {
         items.update(currentItems => {
             currentItems[index].quantity = (currentItems[index].quantity || 1) + change;

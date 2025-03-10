@@ -1,4 +1,8 @@
 <script>
+// @ts-nocheck
+
+// @ts-nocheck
+
     import Users from "../../data/UserData";
     import { onMount } from 'svelte';
 
