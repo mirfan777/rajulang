@@ -100,6 +100,7 @@
                     <div class="collapse-content"> 
                         <p class="text-sm">{product.detailed_product}</p>
                     </div>
+                                         
                 </div>
                 
                 <!-- Action buttons -->
