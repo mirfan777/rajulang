@@ -12,6 +12,7 @@
     /** @type {HTMLDialogElement} */
     let modalFailed;
 
+    // @ts-ignore
     const handleSubmit = (event) => {
         event.preventDefault();
         user = Users.find(user => user.email === email && user.password === password) || null;
