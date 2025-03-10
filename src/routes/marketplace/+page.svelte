@@ -386,7 +386,7 @@
                           Reset Filters
                       </button>
                       <button 
-                          class="btn btn-sm btn-primary flex-1"
+                          class="btn btn-sm btn-success flex-1"
                       >
                           Apply ({getFilteredProductsCount()} items)
                       </button>
@@ -585,7 +585,7 @@
                       <div class="text-5xl mb-4">😕</div>
                       <h3 class="text-xl font-bold">No products found</h3>
                       <p class="text-gray-500 mb-4">Try adjusting your filters to find what you're looking for</p>
-                      <button class="btn btn-primary btn-sm" on:click={resetFilters}>
+                      <button class="btn btn-success btn-sm" on:click={resetFilters}>
                           Reset Filters
                       </button>
                   </div>
