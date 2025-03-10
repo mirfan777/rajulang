@@ -8,6 +8,6 @@ export default {
         themes: ["light"], // This forces light theme only
         darkTheme: "light"
       },
-    plugins: [require('daisyui')],
+    plugins: [require('daisyui'), require("@tailwindcss/line-clamp"),],
     darkMode: "data"
    }

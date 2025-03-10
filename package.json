@@ -28,6 +28,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@tailwindcss/line-clamp": "^0.4.4",
 		"leaflet": "^1.9.4",
 		"rajulang": "file:"
 	}
