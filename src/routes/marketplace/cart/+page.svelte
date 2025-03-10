@@ -89,7 +89,7 @@
                 
             </form>
             <div class="card-body grid grid-cols-1 gap-4">
-                <form action="">
+                <form action="" class="grid grid-cols-1 gap-4">
                     <p class="text-xl font-semibold">
                         Ringkasan Belanja
                     </p>
