@@ -170,6 +170,7 @@
       {/each}
     </div>
     
+    
     <!-- Sidebar - 4 columns on large screens -->
     <div class="lg:col-span-4 space-y-6">
       <!-- Sidebar Content -->
