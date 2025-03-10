@@ -33,10 +33,10 @@
     }
 </script>
 
-<main class="container mx-auto p-4">
+<main class="flex flex-col items-center p-4">
     {#if product}
         <!-- Product Card - Image on left, details on right -->
-        <div class="card lg:card-side bg-base-100 shadow-xl mb-8">
+        <div class="card lg:card-side lg:w-[1200px] w-full h-[700px] h-auto bg-base-100 shadow-xl mb-8">
             <!-- Image on the left side -->
             <figure class="lg:w-1/2 h-64 lg:h-full">
                 <img src={product.image} alt={product.title} class="w-full h-full object-cover" />
@@ -112,7 +112,7 @@
         </div>
         
         <!-- Reviews Section (Outside of the card) -->
-        <div class="bg-base-100 shadow-xl p-6 rounded-box">
+        <div class="bg-base-100 lg:w-[1200px] w-full shadow-xl p-6 rounded-box">
             <h3 class="text-xl font-bold mb-4">Ulasan Pembeli ({product.comments.length})</h3>
             
             {#each product.comments as comment, i}
@@ -142,7 +142,7 @@
         </div>
         
         <!-- Similar Products Section -->
-        <div class="mt-8">
+        <div class="mt-8 lg:w-[1200px] w-full">
             <h3 class="text-xl font-bold mb-4">Produk Serupa</h3>
             
             <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
