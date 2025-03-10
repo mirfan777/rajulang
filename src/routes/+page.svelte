@@ -3,32 +3,38 @@
   import { base } from '$app/paths';
   import { onMount, onDestroy } from 'svelte';
 
-  // Carousel settings
   let currentIndex = 0;
   const totalItems = 3;
   let interval;
   let paused = false;
 
-  // Auto-slide functionality
+
   function startAutoSlide() {
     interval = setInterval(() => {
       if (!paused) {
         currentIndex = (currentIndex + 1) % totalItems;
         goToSlide(currentIndex);
       }
-    }, 5000); // Change slide every 5 seconds
+    }, 5000); 
   }
 
   function stopAutoSlide() {
     clearInterval(interval);
   }
 
-  // Navigation functions
   function goToSlide(index) {
     currentIndex = index;
-    const element = document.getElementById(`item${index + 1}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+      
+      const scrollPosition = carousel.clientWidth * index;
+      
+    
+      carousel.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
     }
   }
 
@@ -42,7 +48,7 @@
     goToSlide(currentIndex);
   }
 
-  // Pause autoplay when mouse is over carousel
+ 
   function handleMouseOver() {
     paused = true;
   }
@@ -110,15 +116,15 @@
     <!-- indicator buttons -->
     <!-- <div class="flex w-full justify-center gap-2 py-2">
       <button 
-        class="btn btn-xs {currentIndex === 0 ? 'btn-neutral' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 0 ? 'btn-primary' : 'btn-outline'}" 
         on:click={() => goToSlide(0)}
       >1</button>
       <button 
-        class="btn btn-xs {currentIndex === 1 ? 'btn-neutral' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 1 ? 'btn-primary' : 'btn-outline'}" 
         on:click={() => goToSlide(1)}
       >2</button>
       <button 
-        class="btn btn-xs {currentIndex === 2 ? 'btn-neutral' : 'btn-outline'}" 
+        class="btn btn-xs {currentIndex === 2 ? 'btn-primary' : 'btn-outline'}" 
         on:click={() => goToSlide(2)}
       >3</button>
     </div> -->
@@ -276,47 +282,47 @@
     </div>
     <!-- endCards -->  
     <!-- landing -->
-      <div class="flex flex-col w-full h-screen gap-10">
+      <div class="flex flex-col w-full  gap-10">
         <div class="flex flex-col w-full items-center gap-5">
           <h1 class="font-bold text-3xl sm:text-center text-left">Ubah Pakaian Lama Jadi Lebih Berarti!</h1>
-          <h2 class="sm:text-center sm:w-4/5 w-full text-left">Rajulang adalah platform sustainable fashion yang mengubah pakaian bekas menjadi kesempatan baru! Kami hadir untuk mengurangi limbah tekstil dan menciptakan ekonomi sirkular yang lebih berkelanjutan.</h2>
+          <h2 class="sm:text-center sm:w-4/5 w-full text-left text-gray-500">Rajulang adalah platform sustainable fashion yang mengubah pakaian bekas menjadi kesempatan baru! Kami hadir untuk mengurangi limbah tekstil dan menciptakan ekonomi sirkular yang lebih berkelanjutan.</h2>
         </div>
         <div class="flex flex-col w-full">
           <h1 class="font-bold text-3xl sm:text-center text-left">Apa yang Bisa Kamu Lakukan di Rajulang?</h1>
         </div>
         <div class="flex flex-wrap gap-20 justify-center">
           <div class="flex gap-5 items-start">
-            <img class="w-10 h-10" src="images/banner1.png" alt="img">
+            <img class="w-10 h-10" src="images/tukarpoin.png" alt="img">
             <div class="flex flex-col">
-              <h3 class="font-bold text">Tukar Poin</h3>
-              <p class="w-96">Punya pakaian bekas? Kumpulkan minimal 2 kg pakaian dan dapatkan 10 poin. Poin bisa ditukar dengan pakaian hasil perbaikan atau desain ulang!</p>
+              <h3 class="font-bold text text-2xl">Tukar Poin</h3>
+              <p class="lg:w-96 w-full text-gray-500">Punya pakaian bekas? Kumpulkan minimal 2 kg pakaian dan dapatkan 10 poin. Poin bisa ditukar dengan pakaian hasil perbaikan atau desain ulang!</p>
             </div>
           </div>
           <div class="flex gap-5 items-start">
-            <img class="w-10 h-10" src="images/banner1.png" alt="img">
+            <img class="w-10 h-10" src="images/event.png" alt="img">
             <div class="flex flex-col">
-              <h3 class="font-bold text">Berita & Event</h3>
-              <p class="w-96">Ikuti berbagai acara menarik, seperti kegiatan tukar-menukar pakaian dan workshop membuat pakaian lama jadi baru. Jangan lewatkan event terbaru!</p>
+              <h3 class="font-bold text text-2xl">Artikel & Event</h3>
+              <p class="lg:w-96 w-full text-gray-500">Ikuti berbagai acara menarik, seperti kegiatan tukar-menukar pakaian dan workshop membuat pakaian lama jadi baru. Jangan lewatkan event terbaru!</p>
             </div>
           </div>
           <div class="flex gap-5 items-start">
-            <img class="w-10 h-10" src="images/banner1.png" alt="img">
+            <img class="w-10 h-10" src="images/tukarbaju.png" alt="img">
             <div class="flex flex-col">
-              <h3 class="font-bold text">Temutukar</h3>
-              <p class="w-96">Cari atau bagikan pakaian bekas dengan mudah! Kamu bisa menemukan pakaian yang kamu butuhkan atau memberikan pakaian kepada orang lain yang membutuhkan.</p>
+              <h3 class="font-bold text text-2xl">Temutukar</h3>
+              <p class="lg:w-96 w-full text-gray-500">Cari atau bagikan pakaian bekas dengan mudah! Kamu bisa menemukan pakaian yang kamu butuhkan atau memberikan pakaian kepada orang lain yang membutuhkan.</p>
             </div>
           </div>
           <div class="flex gap-5 items-start">
-            <img class="w-10 h-10" src="images/banner1.png" alt="img">
+            <img class="w-10 h-10" src="images/market.png" alt="img">
             <div class="flex flex-col">
-              <h3 class="font-bold text">Marketplace</h3>
-              <p class="w-96">Beli pakaian bekas yang sudah diperbaiki atau didesain ulang agar lebih menarik! Bisa dibeli langsung atau ditukar dengan poin dari pakaian bekasmu.</p>
+              <h3 class="font-bold text text-2xl">Marketplace</h3>
+              <p class="lg:w-96 w-full text-gray-500">Beli pakaian bekas yang sudah diperbaiki atau didesain ulang agar lebih menarik! Bisa dibeli langsung atau ditukar dengan poin dari pakaian bekasmu.</p>
             </div>
           </div>
         </div>
         <div class="flex flex-col w-full items-center gap-5">
           <h1 class="font-bold text-3xl sm:text-center text-left"> Bersama, Kita Bisa Kurangi Limbah Pakaian!</h1>
-          <h2 class="sm:text-center sm:w-4/5 w-full text-left">Yuk, bergabung dengan Rajulang dan bantu selamatkan lingkungan dengan cara yang mudah dan bermanfaat!</h2>
+          <h2 class="sm:text-center sm:w-4/5 w-full text-left text-gray-500">Yuk, bergabung dengan Rajulang dan bantu selamatkan lingkungan dengan cara yang mudah dan bermanfaat!</h2>
           <button class="btn btn-wide">Mulai Sekarang!</button>
         </div>
         
