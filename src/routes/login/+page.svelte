@@ -1,5 +1,7 @@
 <script>
     import Users from '../../data/UserData'; // Adjust the path as necessary
+    import { base } from '$app/paths'
+
 
     let email = '';
     let password = '';
@@ -20,7 +22,7 @@
             console.log('Login successful:', user);
             modalSuccess.showModal();
             setTimeout(() => {
-                window.location.href = '/home';
+                window.location.href = '/';
             }, 2000); // Redirect after 2 seconds
         } else {
             console.log('Invalid email or password');

@@ -1,15 +1,37 @@
 
 <script>
-    import { onMount } from 'svelte';
-
+    // @ts-ignore
+    // @ts-ignore
+    import { base } from '$app/paths';
+    import { onMount, onDestroy } from 'svelte';
     import { ProductData } from '../../data/ProductData';
+    
+
+    // @ts-ignore
+    function formatPrice(price) {
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    // Fungsi untuk menentukan warna badge berdasarkan status
+    // @ts-ignore
+    function getBadgeColor(status) {
+        if (status === 'eco-friendly') return 'bg-green-500';
+        if (status === 'recycle') return 'bg-blue-500';
+        return 'bg-purple-500'; // untuk status fixed atau lainnya
+    }
 
     let categories = [...new Set(ProductData.map(product => product.category))];
     let selectedCategory = 'All';
+    let currentIndex = 0;
+    const totalItems = 3;
+    // @ts-ignore
+    let interval;
+    let paused = false;
 
     const filterProducts = () => {
         return selectedCategory === 'All' ? ProductData : ProductData.filter(product => product.category === selectedCategory);
     };
+    // @ts-ignore
     let currentSlide = 0;
 
     let currentPage = 1;
@@ -34,50 +56,128 @@
             currentPage--;
         }
     };
+    // @ts-ignore
     let slides = [
         { id: 1, image: 'https://th.bing.com/th/id/OIP.OirGO7swB4uw9cy0_ThQnQHaE7?rs=1&pid=ImgDetMain' },
         { id: 2, image: 'https://i.ytimg.com/vi/EywyRdz6Q5o/maxresdefault.jpg' },
         { id: 3, image: 'https://i.ytimg.com/vi/DU4MvUMkk6c/maxresdefault.jpg' }
     ];
 
-    const nextSlide = () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-    };
+    function startAutoSlide() {
+    interval = setInterval(() => {
+      if (!paused) {
+        currentIndex = (currentIndex + 1) % totalItems;
+        goToSlide(currentIndex);
+      }
+    }, 5000); 
+  }
 
-    const prevSlide = () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    };
+  function stopAutoSlide() {
+    // @ts-ignore
+    clearInterval(interval);
+  }
 
-    onMount(() => {
-        const interval = setInterval(nextSlide, 10000);
-        return () => clearInterval(interval);
-    });
+  // @ts-ignore
+  function goToSlide(index) {
+    currentIndex = index;
+    
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+      
+      const scrollPosition = carousel.clientWidth * index;
+      
+    
+      carousel.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    goToSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    goToSlide(currentIndex);
+  }
+
+ 
+  // @ts-ignore
+  function handleMouseOver() {
+    paused = true;
+  }
+
+  // @ts-ignore
+  function handleMouseOut() {
+    paused = false;
+  }
+
+  onMount(() => {
+    startAutoSlide();
+  });
+
+  onDestroy(() => {
+    stopAutoSlide();
+  });;
 </script>
 
-<main class="container w-3/4 mx-auto">
-    <section class="hero">
-        <div class="carousel w-full h-[20rem] relative ">
-            {#each slides as slide, index}
-                <div class="carousel-item w-full {index === currentSlide ? 'block' : 'hidden'}">
-                    <img src={slide.image} class="w-full h-[20rem] object-fill" alt="Slide {slide.id}">
-                </div>
-            {/each}
-            
-            <button on:click={prevSlide} class="absolute left-0 top-1/2 transform -translate-y-1/2 btn btn-primary mx-2 bg-transparent">&lt;</button>
-            <button on:click={nextSlide} class="absolute right-0 top-1/2 transform -translate-y-1/2 btn btn-primary mx-2 bg-transparent">&gt;</button>
-            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 mb-4">
-                {#each slides as _, index}
-                    <button on:click={() => currentSlide = index} class="h-2 w-2 rounded-full {index === currentSlide ? 'bg-blue-500' : 'bg-gray-300'}" aria-label="Slide {index + 1}"></button>
-                {/each}
-            </div>
+<main class="w-full flex flex-col items-center">
+    <!-- carousel container -->
+    <!-- svelte-ignore a11y_mouse_events_have_key_events -->
+    <div class="lg:w-[1200px] w-full p-5 flex flex-col gap-5">
+        <!-- main carousel -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <div 
+          class="carousel w-full rounded-lg overflow-hidden" 
+          on:mouseover={handleMouseOver} 
+          on:mouseout={handleMouseOut}
+        >
+          <div id="item1" class="carousel-item w-full">
+            <img
+              src="images/banner1.png"
+              class="w-full object-cover" alt="Banner 1" />
+          </div>
+          <div id="item2" class="carousel-item w-full">
+            <img
+              src="images/banner2.png"
+              class="w-full object-cover" alt="Banner 2" />
+          </div>
+          <div id="item3" class="carousel-item w-full">
+            <img
+              src="images/banner3.png"
+              class="w-full object-cover" alt="Banner 3" />
+          </div>
         </div>
-
-    </section>
+        
+        <!-- side navigation buttons -->
+        <div class="absolute top-1/2 transform -translate-y-1/2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <!-- svelte-ignore a11y_consider_explicit_label -->
+          <button 
+            class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+            on:click={prevSlide}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+        </div>
+        
+        <div class="absolute top-1/2 transform -translate-y-1/2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <!-- svelte-ignore a11y_consider_explicit_label -->
+          <button 
+            class="btn btn-circle btn-primary bg-black/50 border-none text-white" 
+            on:click={nextSlide}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
     <section class="product">
        
 
-        <div class="flex w-full gap-3">
-            <aside class="w-2/3 p-4">
+        <div class="flex w-[1200px] gap-3">
+            <aside class="w-1/4 p-4">
                 <div class="card shadow-lg w-full border-solid">
                     <div class="card-body">
                         <h2 class="text-xl font-bold mb-4">Categories</h2>
@@ -94,61 +194,53 @@
                     </div>
                 </div>
             </aside>
-            <div class="max-w-3/4 product-section">
-                <div class="w-full grid grid-cols-3 gap-4 p-4">
-                    {#each paginatedProducts() as product, index}
-                        <div class="card shadow-sm"  on:click={() => window.location.href = `/marketplace/product/${product.id}`}>
-                            <div class="card-body">
-                                <img src={product.image} alt={product.title} class="w-full h-48 object-cover mb-2">
-                                <h3 class="text-lg font-bold">{product.title}</h3>
-                                <h2 class="text-md font-normal text-ellipsis overflow-hidden whitespace-nowrap">{product.description}</h2>
-                                <p class="text-gray-600">{new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(product.price)}</p>
-                            </div>
-                            
-                        </div>
-                        {#if currentPage === 1 && index === 8}
-                            <div class="card col-span-3 shadow-md">
-                                <div class="card-body p-4">
-                                    <h3 class="text-lg font-bold">Empty Card</h3>
-                                    <p class="text-gray-600">This is an empty card that spans 3 columns.</p>
-                                </div>
-                            </div>
-                        {/if}
-                    {/each}
-                </div>
-                <div class="flex justify-center mt-6">
-                    <button on:click={prevPage} class="btn btn-primary mx-2" disabled={currentPage === 1}>&lt; Previous</button>
-                    {#if totalPages <= 8}
-                        {#each Array(totalPages) as _, index}
-                            <button on:click={() => currentPage = index + 1} class="btn mx-1 {currentPage === index + 1 ? 'btn-primary' : 'bg-sky-50'}">{index + 1}</button>
-                        {/each}
-                    {:else}
-                        {#if currentPage <= 4}
-                            {#each Array(5) as _, index}
-                                <button on:click={() => currentPage = index + 1} class="btn mx-1 {currentPage === index + 1 ? 'btn-primary' : 'bg-sky-50'}">{index + 1}</button>
-                            {/each}
-                            <span class="mx-1">...</span>
-                            <button on:click={() => currentPage = totalPages} class="btn mx-1 {currentPage === totalPages ? 'btn-primary' : 'bg-sky-50'}">{totalPages}</button>
-                        {:else if currentPage > totalPages - 4}
-                            <button on:click={() => currentPage = 1} class="btn mx-1 {currentPage === 1 ? 'btn-primary' : 'bg-sky-50'}">1</button>
-                            <span class="mx-1">...</span>
-                            {#each Array(5) as _, index}
-                                <button on:click={() => currentPage = totalPages - 4 + index} class="btn mx-1 {currentPage === totalPages - 4 + index ? 'btn-primary' : 'bg-sky-50'}">{totalPages - 4 + index}</button>
-                            {/each}
-                        {:else}
-                            <button on:click={() => currentPage = 1} class="btn mx-1 {currentPage === 1 ? 'btn-primary' : 'bg-sky-50'}">1</button>
-                            <span class="mx-1">...</span>
-                            {#each Array(3) as _, index}
-                                <button on:click={() => currentPage = currentPage - 2 + index} class="btn mx-1 {currentPage === currentPage - 2 + index ? 'btn-primary' : 'bg-sky-50'}">{currentPage - 2 + index}</button>
-                            {/each}
-                            <span class="mx-1">...</span>
-                            <button on:click={() => currentPage = totalPages} class="btn mx-1 {currentPage === totalPages ? 'btn-primary' : 'bg-sky-50'}">{totalPages}</button>
-                        {/if}
+            <div class="lg:w-[1200px] w-full place-items-center grid lg:grid-cols-4 lg:gap-4 gap-2 md:grid-cols-3  grid-cols-2 overflow-x-hidden">
+                {#each ProductData as product (product.id)}
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <div class="card bg-base-100 lg:w-56 sm:w-48 w-40 h-72 shadow-sm hover:shadow-2xl hover:shadow-slate-200 " on:click={() => window.location.href = `/marketplace/product/${product.id}`}>
+                <figure class="lg:w-56 sm:w-48 w-40 h-40">
+                    <img 
+                    class="lg:w-56 sm:w-48 w-40 aspect-square h-40 object-cover"
+                    src={product.image}
+                    alt={product.title} 
+                    />
+                </figure>
+                <div class="card-body p-2 gap-1">
+                    <h2 class="card-title line-clamp-2 font-light md:text-base text-sm">
+                    {product.title}
+                    </h2>
+                    <p class="font-bold">
+                    Rp. {formatPrice(product.discount > 0 
+                        ? product.price - (product.price * product.discount / 100) 
+                        : product.price)}
+                    </p>
+                    {#if product.discount > 0}
+                    <div class="flex gap-2 just text-xs">
+                        <p class="line-through text-gray-400 max-w-min">
+                        Rp. {formatPrice(product.price)}
+                        </p>
+                        <span class="text-xs text-red-400 font-bold max-w-min">
+                        {product.discount}%
+                        </span>
+                    </div>
                     {/if}
-                    <button on:click={nextPage} class="btn btn-primary mx-2" disabled={currentPage === totalPages || paginatedProducts().length < itemsPerPage}>Next &gt;</button>
+                    <div class="flex items-center gap-1">
+                    <div class="rating rating-xs">
+                        <div class="mask mask-star bg-orange-400" aria-current="true"></div>
+                    </div>
+                    <div class="text-xs">
+                        {product.average_ratings} | 
+                        <div class="badge badge-xs {getBadgeColor(product.status)} font-bold text-white">
+                        {product.status}
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            
-        </div>
+                </div>
+            {/each} 
+              </div>
+
+        
     </section>
 </main>
