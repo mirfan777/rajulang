@@ -20,24 +20,31 @@
 	  <a class="btn btn-ghost text-xl" href="{base}/">Rajulang</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
-	  <ul class="menu menu-horizontal px-1">
+	  <ul class="menu menu-horizontal px-1 text-lg">
+		<li><a href="/tentang">Tentang</a></li>
 		<li><a href="{base}/temutukar">TemuTukar</a></li>
-		<li><a>Item 2</a></li>
+		<li><a href="/artikel">Komuntitas</a></li>
 		<li><a href="/marketplace">Marketplace</a></li>
 	  </ul>
 	</div>
 	<div class="navbar-end">
-		<div class="dropdown">
-			<img role="button" tabindex="0" src="https://static.vecteezy.com/system/resources/thumbnails/020/911/740/small_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="Profile" class="border-solid border w-10 h-10 rounded-full">
-			
-			<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm mr-5">
-			  <li><a href="/login">Login</a></li>
-			  <li><a href="/profile">Profile</a></li>
-			</ul>
-		  </div>
-	  
+		<div class="end flex gap-6">
+			<a href="/marketplace/cart">
+				<img src="/src/assets/cart.svg" alt="cart" class="w-7" />
+				
+			</a>
+			<div class="dropdown">
+				<img role="button" tabindex="0" src="https://static.vecteezy.com/system/resources/thumbnails/020/911/740/small_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="Profile" class="border-solid border w-10 h-10 rounded-full">
+				
+				<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm mr-5">
+				  <li><a href="/login">Login</a></li>
+				  <li><a href="/profile">Profile</a></li>
+				</ul>
+			</div>
+		</div>
+		
 	</div>
-  </div>
+</div>
 
 {@render children()}
 

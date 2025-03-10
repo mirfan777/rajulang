@@ -28,6 +28,7 @@ const ProductData = Array.from({ length: 200}, (_, index) => {
         product_desc: `Detailed description for product ${index + 1}`,
         category: category,
         detailed_product: `Detailed product information for product ${index + 1}`,
+        quantity: Math.floor(Math.random() * 10) + 1,
         comments: `${UserData[Math.floor(Math.random() * UserData.length)].name} commented on this product`,
         Rating : Math.floor(Math.random() * 5) + 1
     };

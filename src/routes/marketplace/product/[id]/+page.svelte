@@ -22,7 +22,14 @@
                     <li><p>{product.title}</p></li>
                     </ul>
                 </div>
-                <h2 class="card-title">{product.title}</h2>
+                <div class="title-button flex justify-between">
+                    <h2 class="text-2xl font-bold">{product.title}</h2>
+                    <div class="flex gap-5">
+                        <!-- <i class="fa-solid fa-heart"></i> -->
+                        <img src="/src/assets/heart.svg" alt="Like this product" class="w-5"/>
+                        <a href="/marketplace/cart"><img src="/src/assets/add.svg" alt="Add to cart" class="w-6"/></a>
+                    </div>
+                </div>
                 <p class="text-justify text-xl">Rp {product.price.toLocaleString('id-ID')}</p>
                 <div class="rating">
                     {#each Array(5) as _, i}
@@ -31,15 +38,44 @@
                 </div>
                 <!-- Card  -->
                 <div class="card shadow-sm">
-                    <div class="card-body">
+                    
+                    <div class="card-body grid grid-cols-1 gap-4">
+                        
                         <p class="text-lg">
                             Compare
                         </p> 
+                        <ol class="list-decimal list-inside">
+                            <li>Materials: Wool vs Plastic</li>
+                            <li>Durability: High vs Low</li>
+                            <li>Comfort: Soft vs Hard</li>
+                            <li>Breathability: Excellent vs Poor</li>
+                            <li>Environmental Impact: Biodegradable vs Non-biodegradable</li>
+                            <li>Cost: Expensive vs Cheap</li>
+                        </ol>
+                        <div class="flex gap-5 ">
+                            <div class="flex flex-col items-center">
+                                <div class="rounded-full bg-blue-500 text-white w-16 h-16 flex items-center justify-center">
+                                    100%
+                                </div>
+                                <p class="mt-2">Quality</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="rounded-full bg-green-500 text-white w-16 h-16 flex items-center justify-center">
+                                    100%
+                                </div>
+                                <p class="mt-2">Durability</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="rounded-full bg-red-500 text-white w-16 h-16 flex items-center justify-center">
+                                    100%
+                                </div>
+                                <p class="mt-2">Stylish</p>
+                            </div>
+                        </div>
                     </div>
+                                         
                 </div>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+               
             </div>
         </div>
     {:else}
